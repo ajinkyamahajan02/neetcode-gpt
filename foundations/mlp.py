@@ -9,8 +9,7 @@ class Solution:
         h = x
         for i in range(len(weights)):
             h = (h @ weights[i]) + biases[i]
-            if i < len(weights)-1:
+            if i < len(weights) - 1:
                 h = np.maximum(0, h)
-
+            
         return np.round(h, 5)
-
